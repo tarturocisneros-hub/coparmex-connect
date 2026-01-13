@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "JWT_SECRET": "coparmex-connect-jwt-secret-super-seguro-2024",
+    "MONGODB_URI": "mongodb+srv://tarturocisneros_db_user:Pqb1RZxC73SMFm7m@cluster0.uk4bsyj.mongodb.net/coparmex-connect?retryWrites=true&w=majority",
+    "OPENAI_API_KEY": "demo-key",
+    "CORS_ORIGINS": "https://coparmex-connect.vercel.app,http://localhost:3000,http://localhost:19006"
+  }
+}
