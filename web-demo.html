@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPARMEX Connect - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1E40AF, #3B82F6);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+        
+        .login-form {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 20px 0;
+            color: #374151;
+        }
+        
+        .input-label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #D1D5DB;
+            border-radius: 12px;
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .login-btn {
+            width: 100%;
+            background: #1E40AF;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .login-btn:hover {
+            background: #1D4ED8;
+        }
+        
+        .demo-info {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .features {
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 18px;
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .feature-desc {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🏢</div>
+            <h1 class="title">COPARMEX Connect</h1>
+            <p class="subtitle">Tu oficina digital empresarial</p>
+        </div>
+        
+        <div class="demo-info">
+            <h3>🎯 Demo de la Aplicación</h3>
+            <p>Esta es una vista previa de COPARMEX Connect</p>
+            <p><strong>Para probar:</strong> Ingresa cualquier número de socio (ej: 12345)</p>
+        </div>
+        
+        <div class="login-form">
+            <label class="input-label">Número de Socio</label>
+            <input type="text" class="input" placeholder="Ingresa tu número de socio" id="memberNumber">
+            <button class="login-btn" onclick="login()">Ingresar</button>
+        </div>
+        
+        <div class="features">
+            <h3 style="margin-bottom: 16px;">✨ Funcionalidades Principales</h3>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-text">
+                    <div class="feature-title">Test de Perfilamiento</div>
+                    <div class="feature-desc">12 preguntas para definir tu perfil empresarial</div>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <div class="feature-text">
+                    <div class="feature-title">Copar-Trivia</div>
+                    <div class="feature-desc">96 preguntas en 8 categorías empresariales</div>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-text">
+                    <div class="feature-title">Copar-IA</div>
+                    <div class="feature-desc">Asistente especializado en legislación mexicana</div>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <div class="feature-text">
+                    <div class="feature-title">Networking B2B</div>
+                    <div class="feature-desc">Directorio exclusivo de socios</div>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <div class="feature-text">
+                    <div class="feature-title">Smart Wallet</div>
+                    <div class="feature-desc">Beneficios y descuentos exclusivos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentScreen = 'login';
+        let userProfile = null;
+        
+        function login() {
+            const memberNumber = document.getElementById('memberNumber').value;
+            if (memberNumber.trim()) {
+                showOnboarding();
+            } else {
+                alert('Por favor ingresa tu número de socio');
+            }
+        }
+        
+        function showOnboarding() {
+            document.body.innerHTML = `
+                <div class="container">
+                    <div class="header">
+                        <div class="logo">🏢</div>
+                        <h1 class="title">Test de Perfilamiento</h1>
+                        <p class="subtitle">Pregunta 1 de 12</p>
+                    </div>
+                    
+                    <div class="login-form">
+                        <h3 style="margin-bottom: 16px;">¿Cuál es la mayor prioridad en tu agenda?</h3>
+                        
+                        <button class="option-btn" onclick="selectProfile('humanista')">
+                            <strong>A)</strong> Talento humano
+                        </button>
+                        <button class="option-btn" onclick="selectProfile('tecnico')">
+                            <strong>B)</strong> Cumplimiento fiscal
+                        </button>
+                        <button class="option-btn" onclick="selectProfile('industrial')">
+                            <strong>C)</strong> Eficiencia operativa
+                        </button>
+                        <button class="option-btn" onclick="selectProfile('innovacion')">
+                            <strong>D)</strong> Innovación
+                        </button>
+                    </div>
+                    
+                    <div class="demo-info">
+                        <p><strong>Demo:</strong> Selecciona cualquier opción para ver tu perfil</p>
+                    </div>
+                </div>
+                
+                <style>
+                    .option-btn {
+                        width: 100%;
+                        background: white;
+                        border: 2px solid #E5E7EB;
+                        padding: 16px;
+                        border-radius: 12px;
+                        margin-bottom: 12px;
+                        text-align: left;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        font-size: 16px;
+                    }
+                    .option-btn:hover {
+                        border-color: #1E40AF;
+                        background: #EBF4FF;
+                    }
+                </style>
+            `;
+        }
+        
+        function selectProfile(profile) {
+            const profiles = {
+                humanista: {
+                    name: 'Humanista',
+                    color: '#10B981',
+                    commissions: ['Educación', 'Responsabilidad Social', 'Salud']
+                },
+                tecnico: {
+                    name: 'Técnico/Legal', 
+                    color: '#3B82F6',
+                    commissions: ['Fiscal', 'Laboral', 'Justicia y Seguridad']
+                },
+                industrial: {
+                    name: 'Industrial/Económico',
+                    color: '#F59E0B', 
+                    commissions: ['Energía', 'Infraestructura', 'Vivienda']
+                },
+                innovacion: {
+                    name: 'Innovación',
+                    color: '#8B5CF6',
+                    commissions: ['Innovación', 'Negocios Digitales', 'Jóvenes Empresarios']
+                }
+            };
+            
+            userProfile = profiles[profile];
+            showDashboard();
+        }
+        
+        function showDashboard() {
+            document.body.innerHTML = `
+                <div class="container">
+                    <div class="header" style="background: linear-gradient(135deg, ${userProfile.color}, ${userProfile.color}80);">
+                        <div class="logo">🏢</div>
+                        <h1 class="title">¡Hola, Socio!</h1>
+                        <p class="subtitle">Eres Socio Líder Bronce</p>
+                    </div>
+                    
+                    <div style="padding: 20px;">
+                        <div class="demo-info">
+                            <h3>🎯 Tu Perfil: ${userProfile.name}</h3>
+                            <p><strong>Comisiones Recomendadas:</strong></p>
+                            <ul style="text-align: left; margin: 10px 0;">
+                                ${userProfile.commissions.map(c => `<li>${c}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="features">
+                            <h3 style="margin-bottom: 16px; color: #1F2937;">🚀 Funcionalidades</h3>
+                            
+                            <div class="feature-card" onclick="showTrivia()">
+                                <div class="feature-icon">🎮</div>
+                                <div class="feature-text">
+                                    <div class="feature-title">Copar-Trivia</div>
+                                    <div class="feature-desc">¡Tienes un desafío pendiente!</div>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card" onclick="showChat()">
+                                <div class="feature-icon">🤖</div>
+                                <div class="feature-text">
+                                    <div class="feature-title">Copar-IA</div>
+                                    <div class="feature-desc">Consulta legal y fiscal</div>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card" onclick="showBusiness()">
+                                <div class="feature-icon">💼</div>
+                                <div class="feature-text">
+                                    <div class="feature-title">Directorio B2B</div>
+                                    <div class="feature-desc">Encuentra socios comerciales</div>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card" onclick="showBenefits()">
+                                <div class="feature-icon">💳</div>
+                                <div class="feature-text">
+                                    <div class="feature-title">Smart Wallet</div>
+                                    <div class="feature-desc">Beneficios exclusivos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function showTrivia() {
+            alert('🎮 Copar-Trivia\\n\\n¡Socio de Nuevo León te ha desafiado!\\n\\nCategoría: Finanzas Sanas\\n5 preguntas • 30 segundos cada una\\n\\nEn la app real podrías:\\n• Aceptar el desafío\\n• Ver rankings nacional y local\\n• Ganar puntos por respuestas correctas\\n• Desafiar a otros socios');
+        }
+        
+        function showChat() {
+            alert('🤖 Copar-IA\\n\\nAsistente especializado en:\\n• Legislación mexicana\\n• Consultas fiscales\\n• Leyes laborales (NOM-035, PTU)\\n• Comercio exterior (T-MEC)\\n• Estatutos COPARMEX\\n\\n¿En qué puedo ayudarte hoy?');
+        }
+        
+        function showBusiness() {
+            alert('💼 Directorio B2B\\n\\nEmpresas disponibles:\\n• Constructora Veracruz SA (Preconcreto)\\n• Logística del Golfo (Transporte)\\n• Consultoría Fiscal MX\\n\\nFiltros disponibles:\\n• Por sector\\n• Por ubicación\\n• Por servicios');
+        }
+        
+        function showBenefits() {
+            alert('💳 Smart Wallet\\n\\nBeneficios exclusivos:\\n• Aeroméxico: 20% OFF\\n• Hertz: 15% OFF\\n• Hotel City Express: 25% OFF\\n• Office Depot: 10% OFF\\n\\nUbicación: Mapa con beneficios cercanos');
+        }
+        
+        // Simular funcionalidad móvil
+        document.addEventListener('DOMContentLoaded', function() {
+            // Agregar efecto de toque en móviles
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const title = this.querySelector('.feature-title').textContent;
+                    alert('Funcionalidad: ' + title + '\\n\\nEsta característica está completamente implementada en la aplicación React Native.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

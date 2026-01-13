@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "COPARMEX Connect",
+    "slug": "coparmex-connect",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logocoparmex.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logocoparmex.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1E40AF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logocoparmex.png",
+        "backgroundColor": "#1E40AF"
+      },
+      "package": "com.coparmex.connect"
+    },
+    "web": {
+      "favicon": "./assets/logocoparmex.png",
+      "bundler": "metro"
+    },
+    "platforms": ["ios", "android", "web"]
+  }
+}
